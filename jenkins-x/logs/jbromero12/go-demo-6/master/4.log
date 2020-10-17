@@ -1,0 +1,112 @@
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1602949383.950565,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jbromero12-go-demo-6-master-rel-xldsx-h9hcc[0m
+{"level":"info","ts":1602949395.5843654,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/**********/go-demo-6.git @ v1.0.493 in path /workspace/source"}
+{"level":"warn","ts":1602949395.5844371,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1602949395.619164,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f5ebeb67e653eaf4c1db2a4d8baedf4d89c96a8e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+go: downloading gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: downloading github.com/prometheus/client_golang v0.9.2
+go: extracting github.com/prometheus/client_golang v0.9.2
+go: downloading github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: downloading github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: downloading github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: downloading github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: downloading github.com/golang/protobuf v1.2.0
+go: extracting gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: extracting github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: extracting github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: extracting github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: extracting github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+go: extracting github.com/golang/protobuf v1.2.0
+go: extracting github.com/matttproud/golang_protobuf_extensions v1.0.1
+go: finding github.com/prometheus/client_golang v0.9.2
+go: finding gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: finding github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: finding github.com/golang/protobuf v1.2.0
+go: finding github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: finding github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: finding github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: finding github.com/matttproud/golang_protobuf_extensions v1.0.1
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-demo-6 main.go
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1017 15:43:31.591960      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] Built cross stage deps: map[]                
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] Executing 0 build triggers                   
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Checking for cached layer AKSClusterDevopsPrueba.azurecr.io/todo/cache:f0e74ba8a0a06d47d5ea59d233be33a19954748f2e65b5b0fd4018801df6fddf... 
+[36mINFO[0m[0002] Using caching version of cmd: COPY ./bin/ /  
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] ENTRYPOINT ["/go-demo-6"]                    
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] COPY ./bin/ /                                
+[36mINFO[0m[0002] Found cached layer, extracting to filesystem 
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/go-demo-6 to an unshallow repository
+Generating change log from git ref a4d6a7253d68d0bfff01249905267b208879de31 => 57be8e224e009b89046bdac5a84225520df389a9
+Associating user johan-romero in users.jenkins.io with email johanrom12@gmail.com to git GitProvider user with login johan-romero-0 as emails match
+Adding label jenkins.io/git-github-userid=johan-romero-0 to user johan-romero in users.jenkins.io
+Associating user johan-romero in users.jenkins.io with email johanrom12@gmail.com to git GitProvider user with login johan-romero-0 as emails match
+Adding label jenkins.io/git-github-userid=johan-romero-0 to user johan-romero in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for **********/go-demo-6 and tag v1.0.493 so creating a new release
+Updated the release information at https://github.com/**********/go-demo-6/releases/tag/v1.0.493
+generated: /workspace/source/charts/go-demo-6/templates/release.yaml
+Created Release go-demo-6-1-0-493 resource in namespace **
+Updating PipelineActivity **********-go-demo-6-master-4 with version 1.0.493
+Updated PipelineActivities **********-go-demo-6-master-4 with release notes URL: https://github.com/**********/go-demo-6/releases/tag/v1.0.493
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file go-demo-6-1.0.493.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjbromero12-go-demo-6-master-rel-xldsx-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app go-demo-6 version 1.0.493 to namespace **-staging
+Created Pull Request: https://github.com/**********/environment-**-rocks-staging/pull/4
+Added label updatebot to Pull Request https://github.com/**********/environment-**-rocks-staging/pull/4
+got git provider status pending from PR https://github.com/**********/environment-**-rocks-staging/pull/4
+got git provider status pending from PR https://github.com/**********/environment-**-rocks-staging/pull/4
+got git provider status pending from PR https://github.com/**********/environment-**-rocks-staging/pull/4
+got git provider status pending from PR https://github.com/**********/environment-**-rocks-staging/pull/4
+Pull Request https://github.com/**********/environment-**-rocks-staging/pull/4 is merged at sha af89cc96f36fa95be882d47445cf828979d861d5
+Pull Request merged but we are not waiting for the update pipeline to complete!
